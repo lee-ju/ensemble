@@ -393,5 +393,3 @@ test score: 0.4925
 Decision stump가 base learner인 경우보다 성능이 현저히 낮은 것을 알 수 있습니다.
 
 따라서 AdaBoost를 사용하는 경우, base learner는 단순한 모형일수록 우수한 성능을 기대할 수 있습니다.
-
-지금까지 Ensemble Learning 중 Boosting, 그 중 대표적인 Boosting 방법인 AdaBoost와 GBM에 대해 알아보았습니다.
