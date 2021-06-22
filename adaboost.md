@@ -16,7 +16,7 @@
 
 이때 각 객체마다의 MSE는
 
-![그림2](https://imgur.com/MuM8xlg.png)
+![fig-adaboost2](https://user-images.githubusercontent.com/38771583/122849799-27df0c80-d347-11eb-8482-4dc58e8373d7.png)
 
 와 같이 분해가 가능합니다.
 
@@ -28,7 +28,7 @@
 
 반대로 아래의 그림에서 오른쪽은 높은 편향과 낮은 분산을 가지는 경우입니다.
 <h2></h2>
-![그림3](https://imgur.com/AP2yxxU.png)
+![fig-adaboost3](https://user-images.githubusercontent.com/38771583/122849827-33323800-d347-11eb-850a-b942c446bf99.png)
 <h2></h2>
 
 편향이 낮고 분산이 높은 모형은 데이터가 변경됨에 따라 성능이 바뀌게 되며 노이즈에 민감하다는 특징을 가지고 있습니다.
@@ -58,28 +58,28 @@
 
 우선 개별 모형들은
 
-![그림4](https://imgur.com/ha8GEOG.png)
+![fig-adaboost4](https://user-images.githubusercontent.com/38771583/122849837-3a594600-d347-11eb-8a0a-2842c0135841.png)
 
 와 같고 오차는 평균이 0이고 서로 독립이라는 아래와 같은
-![그림5](https://imgur.com/cjj33zg.png)
+![fig-adaboost5](https://user-images.githubusercontent.com/38771583/122849843-3e856380-d347-11eb-941a-0b33ad038f3a.png)
 
 가정을 하게 됩니다. 그러면 **M**개의 각 모형들에 의한 에러의 평균은
 
-![그림6](https://imgur.com/CeJyPxb.png)
+![fig-adaboost6](https://user-images.githubusercontent.com/38771583/122849857-447b4480-d347-11eb-9800-db24544a1a5c.png)
 
 와 같고 **M**개의 개별 모형들의 에러들은
 
-![그림7](https://imgur.com/PmHpkcR.png)
+![fig-adaboost7](https://user-images.githubusercontent.com/38771583/122849864-480ecb80-d347-11eb-9f13-9f17d7202979.png)
 
 로 계산됩니다. 이제 위에서 가정한 식에 의해
 
-![그림8](https://imgur.com/JJaWL4I.png)
+![fig-adaboost8](https://user-images.githubusercontent.com/38771583/122849874-4ba25280-d347-11eb-81be-b56c91e98866.png)
 
 가 성립하나 이는 상당히 **이상적**인 가정에 의한 결과입니다.
 
 따라서 이 결과는 코시 부등식에 의해
 
-![그림9](https://imgur.com/yR9FRi7.png)
+![fig-adaboost9](https://user-images.githubusercontent.com/38771583/122849896-50670680-d347-11eb-9c9f-2afb11389126.png)
 
 가 성립합니다. 즉, 앙상블 기법을 사용하게 되면 단일 모형들의 에러보다는 작은 에러가 발생됨을 보장하게 됩니다.
 
@@ -102,7 +102,7 @@ Bagging은 B개의 Bootstrap에 대해 모형을 각각 적용하여 최종 결�
 
 Bagging과 Boosting의 차이는 아래의 그림과 같습니다.
 
-![그림10](https://imgur.com/JwKlNjt.png)
+![fig-adaboost10](https://user-images.githubusercontent.com/38771583/122849903-5361f700-d347-11eb-9f73-45ada5e25646.png)
 
 즉 Bagging은 병렬처리가 가능하며 알고리즘에 독립적인 샘플을 사용하며, Boosting은 Sequential한 방법에 의해 작동합니다.
 
@@ -123,7 +123,7 @@ AdaBoost는 weak 모형들을 주로 사용합니다.
 
 AdaBoost는 아래의 알고리즘에 의해 작동합니다.
 
-![그림11](https://imgur.com/oqRFe9O.png)
+![fig-adaboost-11](https://user-images.githubusercontent.com/38771583/122849929-607ee600-d347-11eb-92bb-7b3d39c53356.png)
 
 AdaBoost는 각 모형의 오분류율을 계산한 뒤, 오분류율을 이용해 alpha 함수를 만듭니다.
 
@@ -141,13 +141,13 @@ AdaBoost는 각 모형의 오분류율을 계산한 뒤, 오분류율을 이용�
 
 그리고 현재 시점 t에서 모형이 정분류인 경우
 
-![그림12](https://imgur.com/9W4o9G3.png)
+![fig-adaboost-12](https://user-images.githubusercontent.com/38771583/122849954-696fb780-d347-11eb-85ab-a0a07cf67b6c.png)
 
 이므로 해당 객체는 다음 시점에서 선택될 확률이 작아지게 됩니다.
 
 반대로 현재 시점 t에서 모형이 오분류인 경우
 
-![그림13](https://imgur.com/f9bQUvb.png)
+![fig-adaboost-13](https://user-images.githubusercontent.com/38771583/122849961-6bd21180-d347-11eb-9f38-9915d2cd4fda.png)
 
 로 계산되므로 해당 객체는 다음 시점에서 선택될 확률이 커지게 됩니다.
 
