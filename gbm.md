@@ -1,5 +1,10 @@
 이번 포스팅에서는 앙상블 기법 중 Boosting에 해당하는 AdaBoost와 Gradient Boosting Machine에 대해 살펴보겠습니다.
+
 해당 포스팅은 **[고려대학교 산업경영공학과 강필성 교수님](https://github.com/pilsung-kang)** 강의를 참고했음을 밝힙니다.
+
+<h1>Ensemble Learning</h1>
+<h3>앙상블은 무엇일까요?</h3>
+AdaBoost에 이어서 오늘은 GBM에 대해 알아보겠습니다.
 
 <br>
 
