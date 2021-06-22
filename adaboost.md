@@ -12,7 +12,7 @@
 
 데이터 분석에 이용되는 모형들은 대부분 아래와 같이 표현이 가능합니다.
 
-![그림1](https://imgur.com/1NyreI6.png)
+![fig-adaboost1](https://user-images.githubusercontent.com/38771583/122848607-de8dbd80-d344-11eb-8e88-74719c7f8382.png)
 
 이때 각 객체마다의 MSE는
 
