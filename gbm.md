@@ -26,7 +26,7 @@ GBM에서는 이전 시점에서 잘 맞추지 못한 **손실**에 대해 더 �
 
 즉 GBM은 Y에 관심이 있습니다. 아래의 그림을 보고 구체적으로 설명드리겠습니다.
 
-![그림14](https://imgur.com/sfDpHMb.png)
+![fig-gbm1](https://user-images.githubusercontent.com/38771583/122849981-7391b600-d347-11eb-8a2c-3ad62cafbae8.png)
 
 Ensemble Learning은 크게 Bagging과 Boosting으로 나눌 수 있다고 했습니다.
 
@@ -38,11 +38,11 @@ Y를 조절한다는 것은 이전 시점에서 설명하지 못한 잔차를 �
 
 아래의 그림을 보시면 GBM은 이전 모형의 잔차를 설명하기 위해 학습하는 것을 알 수 있습니다.
 
-![그림15](https://imgur.com/YVtmR4g.png)
+![fig-gbm2](https://user-images.githubusercontent.com/38771583/122849995-78566a00-d347-11eb-8a7b-bd1f89190c23.png)
 
 이때 Loss function이 L2인 경우에는
 
-![그림16](https://imgur.com/fLmBqTv.png)
+![fig-gbm3](https://user-images.githubusercontent.com/38771583/122850003-7b515a80-d347-11eb-8f62-19a2b7c80a7b.png)
 
 와 같이 Gradient가 계산됩니다. 따라서 잔차를 학습하는 방향은 Gradient의 반대방향임을 알 수 있습니다.
 
@@ -52,11 +52,11 @@ GBM은 L2말고도 다양한 Loss function의 적용이 가능하며
 
 예측 모형에 적용할 수 있는 Loss function의 예는
 
-![그림17](https://imgur.com/9J0hgsy.png)
+![fig-gbm4](https://user-images.githubusercontent.com/38771583/122850006-7ee4e180-d347-11eb-9be4-78dfa6c54f10.png)
 
 와 같고 분류 모형에 적용할 수 있는 Loss function의 예는
 
-![그림18](https://imgur.com/o1cj7Ij.png)
+![fig-gbm5](https://user-images.githubusercontent.com/38771583/122850017-82786880-d347-11eb-8195-24b794b9a69f.png)
 
 와 같습니다.
 
@@ -80,7 +80,7 @@ T개의 앙상블이 잔차를 학습하는 동안 계속해서 Training set의 
 
 즉 학습률이 alpha일 때 shrinkage factor인 lambda에 의해
 
-![그림19](https://imgur.com/3kr1GXN.png)
+![fig-gbm6](https://user-images.githubusercontent.com/38771583/122850033-873d1c80-d347-11eb-9673-d0421dd776d9.png)
 
 가 되면서 Shrinkage 효과를 얻습니다.
 
@@ -92,7 +92,7 @@ T개의 앙상블이 잔차를 학습하는 동안 계속해서 Training set의 
 
 아래의 그림은 **[고려대학교 강필성 교수님의 수업자료](https://github.com/pilsung-kang/Business-Analytics/blob/master/04%20Ensemble%20Learning/04_Ensemble%20Learning.pdf)**에서 발췌 및 편집한 것으로, 조기 종료하면 성능이 올라갈 수 있는 포인트가 존재함을 알 수 있습니다.
 
-![그림20](https://imgur.com/vtlIr0t.png)
+![fig-gbm7](https://user-images.githubusercontent.com/38771583/122850039-899f7680-d347-11eb-81b2-eddf9bd6c8be.png)
 
 **네 번째는 터미널 노드의 데이터 수입니다.**
 
@@ -118,25 +118,25 @@ Tree-based GBM에서 변수의 중요도는 Information Gain(IG)을 이용해 �
 
 단일 의사결정 나무모형 T에서 j번째 변수의 중요도는
 
-![그림21](https://imgur.com/X5n24Q6.png)
+![fig-gbm8](https://user-images.githubusercontent.com/38771583/122850051-8dcb9400-d347-11eb-89af-991408aaf127.png)
 
 로 계산되며 Gradient Boosting에서는
 
-![그림22](https://imgur.com/QD9TFOw.png)
+![fig-gbm9](https://user-images.githubusercontent.com/38771583/122850060-915f1b00-d347-11eb-9d38-87101c0785d8.png)
 
 로 계산됩니다.
 
 이를 단순화된 예로 설명드리면, 첫 번째 단일 의사결정 나무모형이
 
-![그림23](https://imgur.com/45GppL0.png)
+![fig-gbm10](https://user-images.githubusercontent.com/38771583/122850080-97ed9280-d347-11eb-9795-5e5507646bc6.png)
 
 와 같고 두 번째 단일 의사결정 나무모형이
 
-![그림24](https://imgur.com/SSyzyye.png)
+![fig-gbm11](https://user-images.githubusercontent.com/38771583/122850084-9b811980-d347-11eb-93e8-cc02982f5ce0.png)
 
 와 같으면 각 변수의 IG는
 
-![그림25](https://imgur.com/DEhYtXV.png)
+![fig-gbm12](https://user-images.githubusercontent.com/38771583/122850097-a045cd80-d347-11eb-9539-13d7eb359ca6.png)
 
 로 정리할 수 있기 때문에 가장 중요한 변수는 X2라고 할 수 있습니다.
 
@@ -415,6 +415,6 @@ Training Accuracy는 떨어지고 Test Accuracy는 더욱 높아진 것을 알 �
 
 아래의 그림은 분석 결과를 비교한 것입니다.
 
-![그림26](https://imgur.com/Co88Dj8.png)
+![fig-gbm13](https://user-images.githubusercontent.com/38771583/122850102-a2a82780-d347-11eb-9155-5afa8f5fc56c.png)
 
 Subsampling을 하는 경우 Training set에 Overfitting하는 경향이 줄어드는 것을 알 수 있습니다!
